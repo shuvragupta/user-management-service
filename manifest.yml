@@ -1,10 +1,10 @@
 applications:
-- name: rusho-user-service
+- name: sg-user-service
   disk_quota: 1G
   instances: 1
   memory: 768M
   routes:
-  - route: rs-user-service.cfapps.io
+  - route: sg-user-service.cfapps.io
   services:
   - mongo-mlab
   stack: cflinuxfs2
