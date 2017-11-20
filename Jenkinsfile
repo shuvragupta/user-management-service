@@ -3,7 +3,7 @@ node {
 		 git url: 'https://github.com/shuvragupta/user-management-service.git',branch: 'master' 
 	}
 	stage("build"){
-		bat "C:\apache-maven-3.5.2\bin\mvn clean install"
+		cmd "mvn clean install"
 	}
 	stage("cloudfoundry_login"){
 	    withCredentials([usernamePassword(credentialsId: 'ca1f6060-22d2-4480-8959-f434330dfb47', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
